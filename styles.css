@@ -21,8 +21,8 @@ header {
 
 h1 {
     font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 700;
-    color: #333;
+    font-weight: 600;
+    color: #222;
 }
 
 .container {
@@ -36,7 +36,7 @@ h1 {
 }
 
 .card {
-    flex: 0 1 calc((100% - 2 * 1.5rem) / 3);
+    flex: 1 1 100%;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -58,7 +58,21 @@ h1 {
 
 .card h2 {
     padding: 1rem 1.25rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #444;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 2 columns on medium screens */
+@media (min-width: 600px) {
+    .card {
+        flex: 0 1 calc((100% - 1.5rem) / 2);
+    }
+}
+
+/* 2×3 grid on full screen */
+@media (min-width: 900px) {
+    .card {
+        flex: 0 1 calc((100% - 2 * 1.5rem) / 3);
+    }
 }
